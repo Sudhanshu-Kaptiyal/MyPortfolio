@@ -43,10 +43,10 @@ fill.to('#percent, #bar', {
 
 // Preloader
 
-// fill.to('#preloader', {
-//     duration: .6,
-//     height: '0%',
-// });
+fill.to('#preloader', {
+    duration: .6,
+    height: '0%',
+});
 
 
 // let bar = document.querySelector('#barconfirm');
@@ -772,3 +772,46 @@ else {
 }
 ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 ScrollTrigger.refresh();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Read more button
+
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreBtn = document.getElementById('btn-opacity-gsap');
+    const readMoreContent = document.getElementById('read-more');
+    const readMoreText = document.getElementById('read-more-text');
+    const readLessText = document.getElementById('read-less-text');
+    
+    readMoreBtn.addEventListener('click', function() {
+        if (readMoreContent.classList.contains('expanded')) {
+            // If content is expanded, collapse it
+            readMoreContent.classList.remove('expanded');
+            readMoreText.style.display = 'block';
+            readLessText.style.display = 'none';
+        } else {
+            // If content is collapsed, expand it
+            readMoreContent.classList.add('expanded');
+            readMoreText.style.display = 'none';
+            readLessText.style.display = 'block';
+        }
+    });
+});

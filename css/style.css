@@ -203,6 +203,8 @@ body {
      left: 0px !important;
 }
 
+
+
 .p-no-margin {
      margin-bottom: 0 !important;
 }
@@ -696,11 +698,15 @@ body {
      display: none;
 }
 #read-more {
+     margin-top: 1rem;
      max-height: 0vh;
      overflow: hidden;
      display: inline-block;
-     transition: all 1.5s ease;
+     transition: all 1s ease;
 }
+#read-more.expanded {
+     max-height: 20vh; /* Adjust based on content height */
+ }
 .border-btn {
      border: 1px solid #909090;
 }
