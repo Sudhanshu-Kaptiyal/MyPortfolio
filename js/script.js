@@ -1,3 +1,6 @@
+
+
+// Gsap Library Links
 gsap.registerPlugin(ScrollTrigger);
 const locoScroll = new LocomotiveScroll({
     el: document.querySelector(".smooth-scroll"),
@@ -26,78 +29,107 @@ fill.to('#percent, #bar', {
     opacity: 0,
     zIndex: -1,
 });
-fill.to('#preloader', {
-    duration: .6,
-    height: '0%',
-});
-let bar = document.querySelector('#barconfirm');
-let percent = document.querySelector('#percent');
-document.addEventListener('DOMContentLoaded', function () {
-    document.body.style.overflow = 'hidden';
-    let loaded = 0;
-    let total = document.getElementsByTagName('*').length;
-    let id = setInterval(frame, 10);
-    function frame() {
-        if (loaded >= total) {
-            clearInterval(id);
-            fill.play();
-            document.body.style.overflow = '';
-            gsap.fromTo('.onload-header', {
-                y: '-150%',
-                opacity: 0,
-            }, {
-                duration: 1.5,
-                delay: .2,
-                y: '0',
-                ease: 'power2.out',
-                opacity: 1,
-                delay: 2,
-            });
-            gsap.fromTo('.onload-bg-image', {
-                opacity: 0,
-            }, {
-                duration: 2,
-                ease: 'power2.out',
-                opacity: 1,
-                delay: 2,
-            });
-            gsap.fromTo('.onload-heading p span', {
-                y: '-100%'
-            }, {
-                duration: .1,
-                y: '0%',
-                stagger: .03,
-                ease: 'expo',
-                delay: .5,
-            });
-            gsap.fromTo('.onload-hero-links', {
-                y: '100%',
-                opacity: 0,
-            }, {
-                duration: 1.5,
-                y: '0%',
-                ease: 'expo',
-                opacity: 1,
-                delay: 2,
-            });
-            gsap.fromTo('#onload-parallax', {
-                y: '25%',
-                opacity: 0,
-            }, {
-                duration: 1.5,
-                y: '0%',
-                ease: 'expo',
-                delay: 2.5,
-                opacity: 1,
-            });
-        } else {
-            loaded++;
-            let progress = (loaded / total) * 100;
-            bar.style.width = progress + '%';
-            percent.innerHTML = Math.floor(progress) + '%';
-        }
-    }
-});
+
+
+
+
+
+
+
+
+
+
+
+
+// Preloader
+
+// fill.to('#preloader', {
+//     duration: .6,
+//     height: '0%',
+// });
+
+
+// let bar = document.querySelector('#barconfirm');
+// let percent = document.querySelector('#percent');
+// document.addEventListener('DOMContentLoaded', function () {
+//     document.body.style.overflow = 'hidden';
+//     let loaded = 0;
+//     let total = document.getElementsByTagName('*').length;
+//     let id = setInterval(frame, 10);
+//     function frame() {
+//         if (loaded >= total) {
+//             clearInterval(id);
+//             fill.play();
+//             document.body.style.overflow = '';
+//             gsap.fromTo('.onload-header', {
+//                 y: '-150%',
+//                 opacity: 0,
+//             }, {
+//                 duration: 1.5,
+//                 delay: .2,
+//                 y: '0',
+//                 ease: 'power2.out',
+//                 opacity: 1,
+//                 delay: 2,
+//             });
+//             gsap.fromTo('.onload-bg-image', {
+//                 opacity: 0,
+//             }, {
+//                 duration: 2,
+//                 ease: 'power2.out',
+//                 opacity: 1,
+//                 delay: 2,
+//             });
+//             gsap.fromTo('.onload-heading p span', {
+//                 y: '-100%'
+//             }, {
+//                 duration: .1,
+//                 y: '0%',
+//                 stagger: .03,
+//                 ease: 'expo',
+//                 delay: .5,
+//             });
+//             gsap.fromTo('.onload-hero-links', {
+//                 y: '100%',
+//                 opacity: 0,
+//             }, {
+//                 duration: 1.5,
+//                 y: '0%',
+//                 ease: 'expo',
+//                 opacity: 1,
+//                 delay: 2,
+//             });
+//             gsap.fromTo('#onload-parallax', {
+//                 y: '25%',
+//                 opacity: 0,
+//             }, {
+//                 duration: 1.5,
+//                 y: '0%',
+//                 ease: 'expo',
+//                 delay: 2.5,
+//                 opacity: 1,
+//             });
+//         } else {
+//             loaded++;
+//             let progress = (loaded / total) * 100;
+//             bar.style.width = progress + '%';
+//             percent.innerHTML = Math.floor(progress) + '%';
+//         }
+//     }
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
 const cvs = document.querySelectorAll('.cv');
 cvs.forEach(cv => {
     cv.addEventListener('click', function () {

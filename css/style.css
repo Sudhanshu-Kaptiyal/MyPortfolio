@@ -356,7 +356,8 @@ body {
 }
 .fs-heading p,
 .fs-heading span {
-     font-size: 6vw;
+     /* old font size is 6VW */
+     font-size: 7vw;
      line-height: 115%;
      padding-right: 22px;
      font-family: Satoshi-Medium;
