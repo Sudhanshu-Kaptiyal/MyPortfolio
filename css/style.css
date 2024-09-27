@@ -114,6 +114,10 @@ body {
      overflow: hidden;
 }
 
+.display-none{
+     display: none;
+}
+
 .mt-25 {
      margin-top: 2.5rem;
 }
@@ -828,6 +832,10 @@ body{
      flex-wrap: wrap;
 }
 
+.mobile-card{
+     display: none;
+}
+
 @media only screen and (max-width: 552px){
      html {
           font-size: 14px;
@@ -979,6 +987,7 @@ body{
      }
      .mt-main {
           margin-top: 2em;
+          margin-bottom: 2em;
      }
      .gap_5 {
           gap: 0 !important;
@@ -1105,6 +1114,7 @@ body{
      #box-1>div:nth-child(1)>div>p,
      .box-2>div:nth-child(1)>div>p {
           margin-bottom: .5em;
+          /* font-size: 1rem; */
      }
      #box-1>div:nth-child(1) div div,
      .box-2>div:nth-child(1) div div {
@@ -1126,7 +1136,7 @@ body{
      #box-1>div:nth-child(1)>div>div p,
      .box-2>div:nth-child(1)>div>div p {
           padding: 0.05rem .8rem;
-          font-size: .8rem;
+          font-size: .5rem;
      }
      .p-10 {
           height: 90vh;
@@ -1172,6 +1182,13 @@ body{
           bottom: 0;
           top: -29vh;
           right: -22em;
+     }
+     .desktop-card p{
+          font-size: 110px;
+     }
+     
+     .mobile-card{
+          display: block;
      }
 }
 
@@ -1277,7 +1294,7 @@ body{
     left: 50vw;
     top: -32vh;
     bottom: auto;
-}
+    }
 }
 @media only screen and (max-width:375px){
      #box-1 div:nth-child(1),
@@ -1291,6 +1308,7 @@ body{
      #hire-section section:nth-child(2) p:nth-child(2){
           line-height: 1.1em;
      }
+
 }
 @media only screen and (max-width:1060px) and (min-width:821px){
      #box-1 div:nth-child(1),
