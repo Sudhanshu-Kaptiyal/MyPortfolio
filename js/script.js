@@ -795,13 +795,13 @@ ScrollTrigger.refresh();
 
 // Read more button
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const readMoreBtn = document.getElementById('btn-opacity-gsap');
     const readMoreContent = document.getElementById('read-more');
     const readMoreText = document.getElementById('read-more-text');
     const readLessText = document.getElementById('read-less-text');
-    
-    readMoreBtn.addEventListener('click', function() {
+
+    readMoreBtn.addEventListener('click', function () {
         if (readMoreContent.classList.contains('expanded')) {
             // If content is expanded, collapse it
             readMoreContent.classList.remove('expanded');
