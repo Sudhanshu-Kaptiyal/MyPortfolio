@@ -18,21 +18,29 @@
   src: url("../fonts/Satoshi-Medium.ttf");
   font-weight: 500;
   font-style: normal;
+}
+@font-face {
   font-family: "GeneralSans-MediumItalic";
   src: url("../fonts/GeneralSans-MediumItalic.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: italic;
+}
+@font-face {
   font-family: "GeneralSans-Regular";
   src: url("../fonts/GeneralSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
+}
+@font-face {
   font-family: "GeneralSans-Medium";
   src: url("../fonts/GeneralSans-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
+}
+@font-face {
   font-family: "GeneralSans-Semibold";
   src: url("../fonts/GeneralSans-Semibold.ttf") format("truetype");
   font-weight: 600;
@@ -41,25 +49,25 @@
 }
 .Satoshi-Medium,
 .Satoshi-Medium span {
-  font-family: Satoshi-Medium;
+  font-family: "Satoshi-Medium";
   font-weight: 500;
   font-style: normal;
 }
 
 .GeneralSans-MediumItalic {
-  font-family: GeneralSans-MediumItalic;
+  font-family: "GeneralSans-MediumItalic";
 }
 
 .GeneralSans-Regular {
-  font-family: GeneralSans_Regular;
+  font-family: "GeneralSans-Regular";
 }
 
 .GeneralSans-Medium {
-  font-family: GeneralSans-Medium;
+  font-family: "GeneralSans-Medium";
 }
 
 .GeneralSans-Semibold {
-  font-family: GeneralSans-Semibold;
+  font-family: "GeneralSans-Semibold";
 }
 
 #preloader {
@@ -113,6 +121,10 @@ body {
 
 [data-scroll-container] {
   overflow: hidden;
+}
+
+.display-none {
+  display: none;
 }
 
 .mt-25 {
@@ -310,13 +322,16 @@ body {
 }
 
 .menu {
-  top: -80vh;
+  width: 100vw;
   left: 0;
   z-index: 100;
   min-height: 30vh;
   top: -80vh;
+  display: flex;
+  justify-content: center;
 }
 .menu ul {
+  width: 96% !important;
   display: flex;
   justify-content: space-around;
   margin-bottom: 0 !important;
@@ -329,23 +344,16 @@ body {
 .menu ul li {
   opacity: 0;
   transform: translateY(-25px);
-  padding-top: 44vh;
   padding-bottom: 4vh;
-  position: relative;
   width: 19vw;
-  display: inline-block;
   color: #1D1F21;
-  padding-left: 4rem;
-  padding-right: 4rem;
   transition: all 0.3s ease;
-  margin-bottom: 1.5rem;
   display: flex;
   justify-content: center;
-  padding-top: 0vh;
   position: inherit;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 33vh;
+  padding-top: 2.5rem;
 }
 .menu ul li p {
   font-family: GeneralSans-Regular;
@@ -415,7 +423,7 @@ body {
 
 .fs-heading p,
 .fs-heading span {
-  font-size: 5vw;
+  font-size: 7vw;
   line-height: 115%;
   padding-right: 22px;
   font-family: Satoshi-Medium;
@@ -492,6 +500,7 @@ body {
 .mt-main {
   margin-top: 6rem;
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .padding-top-none {
@@ -684,13 +693,11 @@ body {
 }
 
 .pt-6 {
-  padding-top: 4rem;
   padding-top: 2em;
 }
 
 .pb-6 {
-  padding-bottom: 4rem;
-  padding-bottom: 0 !important;
+  padding-bottom: 2rem;
 }
 
 .fs-3rem,
@@ -707,6 +714,7 @@ body {
 
 .fs-1_5 {
   font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .view-btn {
@@ -714,6 +722,8 @@ body {
   border: 1px solid #909090;
   border-radius: 1rem;
   transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
   padding: 0.25em 1.5em;
 }
 .view-btn:hover {
@@ -846,10 +856,14 @@ body {
 }
 
 #read-more {
+  margin-top: 1rem;
   max-height: 0vh;
   overflow: hidden;
   display: inline-block;
-  transition: all 1.5s ease;
+  transition: all 1s ease;
+}
+#read-more.expanded {
+  max-height: 20vh;
 }
 
 .border-btn {
@@ -922,10 +936,6 @@ body {
 }
 
 .px-3rem {
-  padding-right: 3rem;
-  padding-left: 3rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
   padding-right: 1.5em;
   padding-left: 1.5em;
 }
@@ -1034,24 +1044,17 @@ body {
   margin-right: 20%;
 }
 
+.mobile-card {
+  display: none;
+  display: block;
+}
+
 @media only screen and (max-width: 552px) {
   html {
     font-size: 14px;
   }
-
-  .view-btn {
-    font-size: 1rem;
-    padding:.25rem 1.5rem;
-  }
-
-  .fs-1_5{
-    font-size: 1.25rem;
-  }
-
 }
-
-
-.menu-line-mobile {
+u-line-mobile {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -1248,7 +1251,7 @@ body {
 #box-1 > div:nth-child(1) > div > div p,
 .box-2 > div:nth-child(1) > div > div p {
   padding: 0.05rem 0.8rem;
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 #hire-section {
@@ -1271,18 +1274,25 @@ body {
   font-size: 0.9rem;
 }
 
-@media only screen and (max-width: 820px) {
+.desktop-card p {
+  font-size: 110px;
+}
+
+/* For screens between 553px and 820px */
+@media only screen and (min-width: 553px) and (max-width: 820px) {
   html {
     font-size: 14px;
   }
 }
-@media only screen and (max-width: 820px) and (min-width: 553px) and (max-width: 820px) {
+/* For exactly 375px width (typically mobile) */
+@media only screen and (max-width: 375px) {
   #box-1 div:nth-child(1),
   .box-2 div:nth-child(1) {
     flex-wrap: wrap;
   }
 }
-@media only screen and (max-width: 820px) and (min-width: 1060px) {
+/* For screens between 821px and 1060px */
+@media only screen and (min-width: 821px) and (max-width: 1060px) {
   #box-1 div:nth-child(1),
   .box-2 div:nth-child(1) {
     gap: inherit;
@@ -1306,4 +1316,4 @@ body {
 }
 #help-main section {
   width: 100%;
-}
+}/*# sourceMappingURL=main.css.map */

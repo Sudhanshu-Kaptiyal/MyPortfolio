@@ -223,7 +223,7 @@ Hamburger_Box.addEventListener('click', () => {
 const menuTimeline = gsap.timeline({ paused: true, default: { ease: 'expo' } });
 menuTimeline
     .to('.menu', {
-        top: '10px!important',
+        top: '8!important',
         duration: 1,
         ease: 'expo',
     })
