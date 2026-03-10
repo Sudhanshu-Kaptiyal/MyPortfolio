@@ -246,6 +246,8 @@ body {
      transform: translate(1.5px, 0px);
      overflow: hidden;
      align-items: center;
+     place-items: center!important;
+     display: flex!important;
 }
 .p-sm-1 {
      padding: .25rem !important;
@@ -1130,7 +1132,7 @@ body{
      }
      #box-1>div:nth-child(1),
      .box-2>div:nth-child(1) {
-          gap: 2em !important;
+          gap: 1em !important;
           width: 100%;
      }
      #box-1>div:nth-child(1) img,
@@ -1144,7 +1146,7 @@ body{
      }
      #box-1>div:nth-child(1) div div,
      .box-2>div:nth-child(1) div div {
-          gap: 1em !important;
+          gap: .5em !important;
           justify-content: space-between;
      }
      #box-1>div:nth-child(2),
@@ -1162,7 +1164,7 @@ body{
      #box-1>div:nth-child(1)>div>div p,
      .box-2>div:nth-child(1)>div>div p {
           padding: 0.05rem .8rem;
-          font-size: .5rem;
+          font-size: .75rem;
      }
      .p-10 {
           height: 90vh;
