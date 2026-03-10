@@ -42,7 +42,6 @@ fill.to('#percent, #bar', {
 
 
 // Preloader
-
 fill.to('#preloader', {
     duration: .6,
     height: '0%',

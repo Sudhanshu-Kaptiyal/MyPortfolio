@@ -928,6 +928,10 @@ body {
   gap: 1em;
 }
 
+.gap_2 {
+  gap: 0.5em;
+}
+
 .mt_5 {
   margin-top: 3em;
 }
